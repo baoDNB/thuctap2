@@ -1,0 +1,272 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgba(227, 220, 220, 0.511);
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    
+      
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+    transition: 0.3s ease;
+}
+.navbar-item {
+    text-decoration: none;
+    color: white;
+    
+    transition: border-bottom 0.3s ease;
+}
+
+/* Gạch chân mục active */
+.navbar-item.active {
+    border-bottom: 2px solid rgb(65, 44, 223);
+}
+
+
+.navbar-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* Di chuyển dấu gạch chân xuống dưới */
+    height: 2px;
+    background-color: white; /* Màu gạch chân */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+/* Thêm hiệu ứng hover */
+.navbar-item:hover {
+    border-bottom: 2px solid white;
+}
+.container{
+    display: flex;
+}
+.container1{
+    display: flex;
+    background-color:white;
+    margin-bottom: 20px;
+}
+.goods{
+    width: 55%;
+}
+.goods a, .goods input {
+    display: block;
+    margin-bottom: 10px; 
+}
+.PAM{
+    width: 45%;
+    
+}
+.PAM a, .PAM input {
+    display: block;
+    margin-bottom: 10px; 
+}
+.PAM,.goods{
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd; 
+}
+.container2{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffff;
+}
+#body{
+    padding: 0px 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border-bottom: 1px solid #ddd;
+    padding:  5px;
+    text-align: left;
+  }
+.container2 th {
+    background-color: #ddd; 
+}
+#input1  {
+    width: 300px;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  #input2  {
+    width: 300px;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+i {
+    color: #ddd;
+    margin-right: 20px;
+}
+.View{
+    display: flex;
+    justify-content: space-between;
+}
+.View1{
+    display:flex;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0px;
+    color: blue;
+    
+}
+.View2{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+.PAMNEWS{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    
+    border: 2px solid #1a44ff;
+      
+    color: #fff;
+    background-color: #1a44ff;
+    transition: background-color 0.3s ease;
+}
+.action-icon {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+}
+
+.action-menu {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 100px;
+}
+
+.action-menu button {
+    background: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.action-menu button:hover {
+    background-color: #ddd;
+}
+
+.status-cell {
+    position: relative;
+}
+
+.action-icon {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.status-menu {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-menu button {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.status-menu button:hover {
+    background-color: #ddd;
+}
+
+.action-icon {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.action-menu {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.action-menu button {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.action-menu button:hover {
+    background-color: #ddd;
+}
+
+.status-cell {
+    position: relative;
+}
+.search-container {
+    position: relative;
+    width: 95%;
+}
+.search-container input {
+    width: 100%;
+    padding-left: 40px; 
+    box-sizing: border-box;
+}
+.search-container .icon {
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; 
+    height: 20px;
+    fill: currentColor; 
+}
