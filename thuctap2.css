@@ -2,31 +2,24 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: rgba(227, 220, 220, 0.511);
+    padding: 0px 5px;
 }
 #header{
-    display: flex;
+    display: flex; 
+    justify-content: space-between; 
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #000;
-    margin: 0;
-    padding: 0;
+    background-color: black;
 }
-
 #navbar {
     display: flex;
     align-items: left;
     justify-content: left;
-    
-      
 }
-
 #navbar li {
     list-style: none;
     padding: 0 10px;
     position: relative;
 }
-
 #navbar li a {
     text-decoration: none;
     font-size: 16px;
@@ -34,70 +27,150 @@ body{
     color: #ffff;
     transition: 0.3s ease;
 }
+/* Đặt căn bản cho các mục trong thanh navbar */
 .navbar-item {
-    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px; /* Điều chỉnh khoảng cách giữa các mục */
     color: white;
-    
-    transition: border-bottom 0.3s ease;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
 }
 
-/* Gạch chân mục active */
+/* Đường gạch chân cho mục active */
 .navbar-item.active {
-    border-bottom: 2px solid rgb(65, 44, 223);
+    border-bottom: 2px solid rgb(65, 44, 223); /* Điều chỉnh màu cho gạch chân */
+    padding-bottom: 0px;
 }
 
-
+/* Hiệu ứng khi hover */
 .navbar-item::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -2px; /* Di chuyển dấu gạch chân xuống dưới */
+    bottom: 0;
     height: 2px;
-    background-color: white; /* Màu gạch chân */
-    transform: scaleX(0);
+    background-color: white;
+    transform: scaleX(0); /* Ban đầu đường gạch chân bị thu nhỏ */
+    transform-origin: right;
     transition: transform 0.3s ease;
 }
-/* Thêm hiệu ứng hover */
-.navbar-item:hover {
-    border-bottom: 2px solid white;
+
+/* Khi hover thì đường gạch chân sẽ xuất hiện */
+.navbar-item:hover::after {
+    transform: scaleX(1); /* Khi hover, đường gạch chân sẽ hiện ra */
+    transform-origin: left;
 }
+
+
+/* Giữ lại padding-bottom khi hover */
+.navbar-item:hover {
+    padding-bottom: 0px;
+}
+
 .container{
     display: flex;
 }
-.container1{
+/* Các thiết lập hiện tại */
+.container1 {
     display: flex;
-    background-color:white;
+    background-color: white;
     margin-bottom: 20px;
 }
-.goods{
+
+.goods {
     width: 55%;
 }
+
 .goods a, .goods input {
     display: block;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
-.PAM{
+
+.PAM {
     width: 45%;
-    
 }
+
 .PAM a, .PAM input {
     display: block;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
-.PAM,.goods{
+
+.PAM, .goods {
     padding: 20px;
     box-sizing: border-box;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
 }
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-container input {
+    width: 100%;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.search-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th, tbody td {
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    height: 50px; /* Cố định chiều cao hàng */
+}
+
+thead th {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    vertical-align: middle;
+}
+
+tbody tr {
+    height: 50px; /* Cố định chiều cao hàng */
+}
+
+td svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+}
+
+/* Đảm bảo các hàng của bảng có chiều cao đồng đều */
+.goods table tbody tr, .PAM table tbody tr {
+    display: table-row;
+    height: auto;
+}
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
 .container2{
     margin-top: 20px;
     padding: 20px;
     background-color: #ffff;
 }
-#body{
-    padding: 0px 20px;
-}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -105,7 +178,6 @@ table {
 
   th, td {
     border-bottom: 1px solid #ddd;
-    padding:  5px;
     text-align: left;
   }
 .container2 th {
@@ -113,17 +185,17 @@ table {
 }
 #input1  {
     width: 300px;
-    padding: 10px;
-    background-color: #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    background-color: #e9e9e9;
     outline: none;
+    border: 0px;
     font-size: 16px;
   }
-  #input2  {
+#input2  {
     width: 300px;
-    padding: 10px;
-    background-color: #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    background-color: #e9e9e9;
+    border:0px;
     outline: none;
     font-size: 16px;
   }
@@ -166,7 +238,6 @@ i {
     font-size: 18px;
     position: relative;
 }
-
 .action-menu {
     position: absolute;
     background-color: #f9f9f9;
@@ -174,7 +245,6 @@ i {
     z-index: 1;
     min-width: 100px;
 }
-
 .action-menu button {
     background: none;
     border: none;
@@ -251,22 +321,4 @@ i {
 
 .status-cell {
     position: relative;
-}
-.search-container {
-    position: relative;
-    width: 95%;
-}
-.search-container input {
-    width: 100%;
-    padding-left: 40px; 
-    box-sizing: border-box;
-}
-.search-container .icon {
-    position: absolute;
-    left: 10px; 
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px; 
-    height: 20px;
-    fill: currentColor; 
 }

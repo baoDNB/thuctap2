@@ -30,6 +30,7 @@ function searchTable(searchInputId, tableClass) {
 // Gọi hàm tìm kiếm cho từng bảng
 searchTable('input1', '.goods table');
 searchTable('input2', '.PAM table');
+
 function toggleActionMenu(icon) {
     const menu = icon.nextElementSibling;
 
