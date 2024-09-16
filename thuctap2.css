@@ -5,6 +5,7 @@ body{
     padding: 0px 5px;
 }
 #header{
+    height: 50px;
     display: flex; 
     justify-content: space-between; 
     align-items: center;
@@ -13,12 +14,17 @@ body{
 #navbar {
     display: flex;
     align-items: left;
-    justify-content: left;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
 }
 #navbar li {
+    height: 100%;
     list-style: none;
     padding: 0 10px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 #navbar li a {
     text-decoration: none;
@@ -31,21 +37,18 @@ body{
 .navbar-item {
     position: relative;
     display: inline-block;
-    padding: 15px 20px; /* Điều chỉnh khoảng cách giữa các mục */
+    padding: 15px 20px; 
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
     cursor: pointer;
 }
-
-/* Đường gạch chân cho mục active */
 .navbar-item.active {
-    border-bottom: 2px solid rgb(65, 44, 223); /* Điều chỉnh màu cho gạch chân */
+    border-bottom: 4px solid rgb(27, 0, 233);
     padding-bottom: 0px;
+    height: 100%;
 }
-
-/* Hiệu ứng khi hover */
 .navbar-item::after {
     content: '';
     position: absolute;
@@ -54,68 +57,58 @@ body{
     bottom: 0;
     height: 2px;
     background-color: white;
-    transform: scaleX(0); /* Ban đầu đường gạch chân bị thu nhỏ */
+    transform: scaleX(0); 
     transform-origin: right;
     transition: transform 0.3s ease;
 }
 
-/* Khi hover thì đường gạch chân sẽ xuất hiện */
 .navbar-item:hover::after {
-    transform: scaleX(1); /* Khi hover, đường gạch chân sẽ hiện ra */
+    transform: scaleX(1); 
     transform-origin: left;
 }
-
-
-/* Giữ lại padding-bottom khi hover */
 .navbar-item:hover {
     padding-bottom: 0px;
 }
-
 .container{
     display: flex;
 }
-/* Các thiết lập hiện tại */
 .container1 {
     display: flex;
     background-color: white;
     margin-bottom: 20px;
 }
-
 .goods {
     width: 55%;
 }
-
 .goods a, .goods input {
     display: block;
     margin-bottom: 10px;
 }
-
 .PAM {
     width: 45%;
 }
-
-.PAM a, .PAM input {
+    .PAM input {
     display: block;
     margin-bottom: 10px;
 }
-
+.title{
+    display: block;
+    margin-bottom: 10px;
+}
 .PAM, .goods {
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #ddd;
 }
-
 .search-container {
     position: relative;
     width: 100%;
 }
-
 .search-container input {
     width: 100%;
     padding-left: 40px;
     box-sizing: border-box;
 }
-
 .search-container .icon {
     position: absolute;
     left: 10px;
@@ -125,57 +118,46 @@ body{
     height: 20px;
     fill: currentColor;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
 }
-
 thead th, tbody td {
     border-bottom: 1px solid #ddd;
     text-align: left;
-    height: 50px; /* Cố định chiều cao hàng */
+    height: 30px; 
 }
-
 thead th {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 tbody td {
     vertical-align: middle;
 }
-
 tbody tr {
-    height: 50px; /* Cố định chiều cao hàng */
+    height: 30px; 
 }
-
 td svg {
-    width: 24px;
-    height: 24px;
-    fill: #000;
+    width: 15px;
+    height: 15px;
+    
 }
-
-/* Đảm bảo các hàng của bảng có chiều cao đồng đều */
 .goods table tbody tr, .PAM table tbody tr {
     display: table-row;
-    height: auto;
+    height: 30px    ;
 }
 tbody tr:last-child td {
     border-bottom: none;
 }
-
-
 .container2{
     margin-top: 20px;
     padding: 20px;
     background-color: #ffff;
 }
-
 table {
     border-collapse: collapse;
     width: 100%;
   }
-
   th, td {
     border-bottom: 1px solid #ddd;
     text-align: left;
@@ -186,7 +168,7 @@ table {
 #input1  {
     width: 300px;
     padding: 15px;
-    background-color: #e9e9e9;
+    background-color: #f5f5f5;
     outline: none;
     border: 0px;
     font-size: 16px;
@@ -194,7 +176,7 @@ table {
 #input2  {
     width: 300px;
     padding: 15px;
-    background-color: #e9e9e9;
+    background-color:#f5f5f5;
     border:0px;
     outline: none;
     font-size: 16px;
@@ -215,24 +197,38 @@ i {
     font-size: 16px;
     padding: 10px 0px;
     color: blue;
-    
 }
 .View2{
     align-items: center;
     display: flex;
     gap: 20px;
 }
+
+
 .PAMNEWS{
-    display: inline-block;
+    background-color: #007bff; /* Màu xanh cho nút */
+    color: white; /* Màu chữ trắng */
+    border: none;
     padding: 10px 20px;
     font-size: 16px;
+     /* Bo tròn góc */
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .PAMNEWS .icon {
+    font-size: 18px;
+    justify-items: center;
+    align-items: center;
+    margin-left: 40px; /* Tăng khoảng cách giữa chữ và icon */
     
-    border: 2px solid #1a44ff;
-      
-    color: #fff;
-    background-color: #1a44ff;
-    transition: background-color 0.3s ease;
-}
+  }
+  
+  .PAMNEWS:hover {
+    background-color: #0056b3; /* Màu khi hover */
+  }
+  
 .action-icon {
     cursor: pointer;
     font-size: 18px;
@@ -245,6 +241,7 @@ i {
     z-index: 1;
     min-width: 100px;
 }
+
 .action-menu button {
     background: none;
     border: none;
@@ -253,21 +250,17 @@ i {
     text-align: left;
     cursor: pointer;
 }
-
 .action-menu button:hover {
     background-color: #ddd;
 }
-
 .status-cell {
     position: relative;
 }
-
 .action-icon {
     cursor: pointer;
     font-size: 18px;
     margin-left: 10px;
 }
-
 .status-menu {
     position: absolute;
     background-color: #f9f9f9;
@@ -277,7 +270,6 @@ i {
     display: flex;
     flex-direction: column;
 }
-
 .status-menu button {
     background: none;
     border: none;
@@ -285,17 +277,14 @@ i {
     text-align: left;
     cursor: pointer;
 }
-
 .status-menu button:hover {
     background-color: #ddd;
 }
-
 .action-icon {
     cursor: pointer;
     font-size: 18px;
     margin-left: 10px;
 }
-
 .action-menu {
     position: absolute;
     background-color: #f9f9f9;
@@ -306,7 +295,6 @@ i {
     flex-direction: column;
     padding: 10px;
 }
-
 .action-menu button {
     background: none;
     border: none;
@@ -314,11 +302,12 @@ i {
     text-align: left;
     cursor: pointer;
 }
-
 .action-menu button:hover {
     background-color: #ddd;
 }
-
 .status-cell {
     position: relative;
+}
+.ma{
+    color: #1a44ff;
 }
