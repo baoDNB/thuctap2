@@ -203,30 +203,26 @@ i {
     display: flex;
     gap: 20px;
 }
-
-
 .PAMNEWS{
-    background-color: #007bff; /* Màu xanh cho nút */
-    color: white; /* Màu chữ trắng */
+    background-color: #007bff; 
+    color: white; 
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-     /* Bo tròn góc */
+
     display: inline-flex;
     align-items: center;
     cursor: pointer;
   }
-  
   .PAMNEWS .icon {
     font-size: 18px;
     justify-items: center;
     align-items: center;
-    margin-left: 40px; /* Tăng khoảng cách giữa chữ và icon */
+    margin-left: 40px; 
     
   }
-  
   .PAMNEWS:hover {
-    background-color: #0056b3; /* Màu khi hover */
+    background-color: #0056b3; 
   }
   
 .action-icon {
