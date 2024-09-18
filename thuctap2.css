@@ -2,7 +2,7 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: rgba(227, 220, 220, 0.511);
-    padding: 0px 5px;
+    padding: 0px
 }
 #header{
     height: 50px;
@@ -48,6 +48,7 @@ body{
     padding-bottom: 0px;
     height: 100%;
 }
+
 .navbar-item::after {
     content: '';
     position: absolute;
@@ -74,17 +75,17 @@ body{
 .container1 {
     display: flex;
     background-color: white;
-    margin-bottom: 20px;
+    margin: 0px 20px;
 }
 .goods {
-    width: 55%;
+    width: 60%;
 }
 .goods a, .goods input {
     display: block;
     margin-bottom: 10px;
 }
 .PAM {
-    width: 45%;
+    width: 40%;
 }
     .PAM input {
     display: block;
@@ -149,7 +150,7 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 .container2{
-    margin-top: 20px;
+    margin: 20px;
     padding: 20px;
     background-color: #ffff;
 }
